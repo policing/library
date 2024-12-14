@@ -50,7 +50,6 @@ public class BookService {
     public void returnBook(BookReturnRequest request) {
         User user = userRepository.findByName(request.getUserName())
                 .orElseThrow(IllegalArgumentException::new);
-
-        user.returnBook(request.getBookName());
+       user.returnBook(request.getBookName());
     }
 }
